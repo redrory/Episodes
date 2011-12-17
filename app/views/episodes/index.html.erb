@@ -1,14 +1,15 @@
 <h1> Episodes</h1>
 
-<%= form_for Episode.new do |f|%>
-	<%= f.label :title %>
-	<%= f.text_field :title %>
-	<%= f.submit %>
-<% end %>
+<%= render 'form' %>
 
 <ul>
 	<% for episode in @episodes %>
-	<li> <%= episode.title %></li>
+	<li id = "episode_<%= episode.id%>">
+	 <%= episode.title %>
+		| <%= link_to "Edit" , edit_episode_path(episode) %>
+		| <%= link_to "Delete", episode, :method => 'delete' %>
+	</li>
+
 	<% end %>
 
 </ul>
