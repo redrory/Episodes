@@ -1,8 +1,6 @@
-<h1> Episodes</h1>
-
 <%= render 'form' %>
 
-<ul>
+<ol>
 	<% for episode in @episodes %>
 	<li id = "episode_<%= episode.id%>">
 	 <%= episode.title %>
@@ -12,4 +10,4 @@
 
 	<% end %>
 
-</ul>
+</ol>

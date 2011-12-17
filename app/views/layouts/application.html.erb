@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Episodes</title>
+
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<body class = "login">
+	  <div id = "wrapper">
+	  <div id="box">
 
-	<% flash.each do |name,message| %>
-	<%=content_tag :div, message, :id => "flash_#{name}"%>
-	<% end %>
-<%= yield %>
+	  <a href = "/"><h1> episodes</h1></a>
+	  <h2> track of your shows </h2>
+	  <div class = "rule"></div>
+
+		<% flash.each do |name,message| %>
+		<%=content_tag :div, message, :id => "flash_#{name}"%>
+		<% end %>
+		<%= yield %>
+	  </div>
+	  </div>
 </body>
 </html>
