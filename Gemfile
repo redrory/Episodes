@@ -24,6 +24,7 @@ group :test, :development do
 	gem 'capybara'
 	gem 'guard-rspec'
 	gem 'growl_notify'
+	gem "launchy"
 
 end
 

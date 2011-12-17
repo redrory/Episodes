@@ -1,2 +1,14 @@
-<h1>Episodes#index</h1>
-<p>Find me in app/views/episodes/index.html.erb</p>
+<h1> Episodes</h1>
+
+<%= form_for Episode.new do |f|%>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.submit %>
+<% end %>
+
+<ul>
+	<% for episode in @episodes %>
+	<li> <%= episode.title %></li>
+	<% end %>
+
+</ul>
