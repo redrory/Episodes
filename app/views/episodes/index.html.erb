@@ -2,11 +2,11 @@
 
 <ol>
 	<% for episode in @episodes %>
-	<li id = "episode_<%= episode.id%>">
-	 <%= episode.title %>
-		| <%= link_to "Edit" , edit_episode_path(episode) %>
-		| <%= link_to "Delete", episode, :method => 'delete' %>
-	</li>
+	<li id = "episode_<%= episode.id%>" class = "content">
+		 <%= episode.title %> | <%= episode.season %> | <%= episode.number %>
+			| <%= link_to "Edit" , edit_episode_path(episode) %>
+			| <%= link_to "Delete", episode, :method => 'delete' %>
+		</li>
 
 	<% end %>
 

@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111214030352) do
+ActiveRecord::Schema.define(:version => 20111220024456) do
 
   create_table "episodes", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "season"
+    t.integer  "number"
   end
 
 end

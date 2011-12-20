@@ -1,5 +1,12 @@
 <%= form_for @episode do |f|%>
 	<%= f.label :title %>
 	<%= f.text_field :title %>
+	<br>
+	<%= f.label :season, :class => "content" %>
+	<%= f.number_field :season, :class => "content" %>
+
+	<%= f.label :number, :class => "content" %>
+	<%= f.number_field :number, :class => "content"%>
+	<br>
 	<%= f.submit %>
 <% end %>
