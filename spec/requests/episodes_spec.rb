@@ -61,10 +61,15 @@ describe "Episodes" do
         page.should have_content 'There was an error updating episode'
     end
 
-    #it "should check seen it on an episode" do
-     #   visit episodes_path
-      #  click_link 'Seen it'
-    #end
+    it "should check seen it on an episode" do
+        visit episodes_path
+        click_link 'Watch'
+
+        current_path.should == episodes_path
+        page.should have_content 'You saw that episode'
+
+
+    end
 end
 
     describe "DELETE /episode" do
