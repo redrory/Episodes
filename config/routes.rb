@@ -1,4 +1,6 @@
 Episodes::Application.routes.draw do
+  devise_for :users
+
   get "episodes/index"
   get "episodes/watch"
 
