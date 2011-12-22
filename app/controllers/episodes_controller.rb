@@ -27,7 +27,7 @@ class EpisodesController < ApplicationController
     @watch = episode.number + 1
 
     if episode.update_attributes(:number => @watch)
-      redirect_to episodes_path, :notice => "Success"
+      redirect_to episodes_path, :notice => "You saw that episode"
     else
       redirect_to :back, :notice => "There was an error updating episode"
     end
