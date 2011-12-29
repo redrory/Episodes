@@ -4,7 +4,9 @@ class EpisodesController < ApplicationController
 
   def index
     @episode = Episode.new
-  	@episodes = Episode.all
+  	#@episodes = Episode.all
+    @user = current_user
+    @episodes = @user.episodes
   end
 
   def create
