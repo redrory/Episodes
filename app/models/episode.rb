@@ -4,5 +4,5 @@ class Episode < ActiveRecord::Base
 	validates :number, presence: true 
 
 	belongs_to :user
-	attr_accessible :title
+	#attr_accessible :title
 end

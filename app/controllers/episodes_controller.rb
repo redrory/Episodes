@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
   
-  before_filter :authenticate_user!, :except => [:login]
+  before_filter :authenticate_user!, :except => [:login, :watch]
 
   def index
     @episode = Episode.new
