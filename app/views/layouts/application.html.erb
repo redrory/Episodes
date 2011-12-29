@@ -15,6 +15,21 @@
 	  <h2> track your shows </h2>
 	  <div class = "rule"></div>
 
+	  <div id = "user_nav">
+
+	  <% if user_signed_in? %>
+	  	 Signed in as <%= current_user.email %>, Not you
+	  	| <%= link_to "Sign out", destroy_user_session_path %>
+
+	  <% else %>
+	  	<%= link_to "Sign up" %> OR
+	  	<%= link_to "Sign in", user_session_path%>
+
+	  <% end %>
+
+
+	  </div>
+
 		<% flash.each do |name,message| %>
 		<%=content_tag :div, message, :id => "flash_#{name}"%>
 		<% end %>

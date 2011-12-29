@@ -3,9 +3,11 @@ Episodes::Application.routes.draw do
 
   get "episodes/index"
   get "episodes/watch"
+  get "episodes/login"
 
-  root :to => 'Episodes#index'
+  root :to => 'Episodes#login'
   resources :episodes
 
   match 'watch' => 'Episodes#watch'
+  match 'login' => 'Episodes#login'
 end

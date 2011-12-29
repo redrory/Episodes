@@ -1,4 +1,7 @@
 class EpisodesController < ApplicationController
+  
+  before_filter :authenticate_user!, :except => [:login]
+
   def index
     @episode = Episode.new
   	@episodes = Episode.all
@@ -36,6 +39,15 @@ class EpisodesController < ApplicationController
     #Object.update_attributes(:field1 => "value", :field2 => "value2", :field3 => "value3")
 
     #redirect_to :back, :notice => "You saw that episode"
+  end
+
+  def login
+    if user_signed_in?
+      redirect_to episodes_path
+  else
+
+  end
+
   end
 
 
